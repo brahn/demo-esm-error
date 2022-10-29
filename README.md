@@ -29,3 +29,21 @@ Instead rename spatialmerge.cjs.js to end in .cjs, change the requiring code to 
   code: 'ERR_REQUIRE_ESM'
 }
 ```
+
+# Unsatisfying workaround
+
+1. Make a local copy of the [`spatialmerge` repo](https://github.com/chrispahm/spatialmerge) with this change to its package.json:
+   https://github.com/chrispahm/spatialmerge/pull/4/files
+   Run `npm run build` inside that local copy
+
+2. Update this repo's package.json to reference that local copy, then `npm i`.
+
+This leds to `npm run main` producing the following (expected) error:
+```
+spatialmerge/dist/spatialmerge.cjs:138
+  if (geojson1.type !== 'FeatureCollection') throw new Error('<geojson1> must be a GeoJSON FeatureCollection')
+                                                   ^
+Error: <geojson1> must be a GeoJSON FeatureCollection
+    at sjoin (spatialmerge/dist/spatialmerge.cjs:138:52)
+    at Object.<anonymous> (demo-esm-error/src/main.ts:4:21)
+```
