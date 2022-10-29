@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+tmp/
+
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+.DS_Store

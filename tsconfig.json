@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "noImplicitAny": false,
+    // "esModuleInterop": true,
+    // "target": "es6",
+    // "module": "commonjs",
+    // "module": "NodeNext"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"],
+  "typeRoots": [
+    "./src/index.d.ts",
+  ]
+}
