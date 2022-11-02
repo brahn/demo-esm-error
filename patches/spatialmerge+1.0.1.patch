@@ -1,0 +1,13 @@
+diff --git a/node_modules/spatialmerge/package.json b/node_modules/spatialmerge/package.json
+index 34be893..cc5dad7 100644
+--- a/node_modules/spatialmerge/package.json
++++ b/node_modules/spatialmerge/package.json
+@@ -2,8 +2,7 @@
+   "name": "spatialmerge",
+   "version": "1.0.1",
+   "description": "Merging geospatial data in JS",
+-  "type": "module",
+   "main": "./dist/spatialmerge.cjs.js",
+   "exports": {
+     "umd": "./dist/spatialmerge.min.js",
+     "require": "./dist/spatialmerge.cjs.js",
